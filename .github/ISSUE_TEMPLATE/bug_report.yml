@@ -1,0 +1,60 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Plugin Version
+      description: "Found in the About tab (e.g. 0.7.5.11)"
+      placeholder: "0.7.5.11"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - macOS (Apple Silicon)
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: daw
+    attributes:
+      label: DAW
+      description: "Which DAW are you using? (e.g. Ableton Live 12, FL Studio 24)"
+      placeholder: "Ableton Live 12"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: "What did you do that caused the problem?"
+      placeholder: |
+        1. Open plugin
+        2. Click on ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: "What did you expect to happen?"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: "What actually happened?"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log Output (optional)
+      description: "Paste relevant lines from the plugin log file. macOS: /tmp/vstcollaboration.log — Windows: %TEMP%\\vstcollaboration.log"
+      render: text
